@@ -13,7 +13,11 @@
  * Return: Number of chars printed
  */
 int print_char(va_list types, char buffer[],
+<<<<<<< HEAD
 		int flags, int width, int precision, int size)
+=======
+	int flags, int width, int precision, int size)
+>>>>>>> 44a56f3faa9b33306d38ad35a7b89980e5ea2353
 {
 	char c = va_arg(types, int);
 
@@ -31,7 +35,11 @@ int print_char(va_list types, char buffer[],
  * Return: Number of chars printed
  */
 int print_string(va_list types, char buffer[],
+<<<<<<< HEAD
 		int flags, int width, int precision, int size)
+=======
+	int flags, int width, int precision, int size)
+>>>>>>> 44a56f3faa9b33306d38ad35a7b89980e5ea2353
 {
 	int length = 0, i;
 	char *str = va_arg(types, char *);
@@ -85,8 +93,13 @@ int print_string(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Number of chars printed
  */
+<<<<<<< HEAD
 int print_percent(va_list types, char buffer[]
 		int flags, int width, int precision, int size)
+=======
+int print_percent(va_list types, char buffer[],
+	int flags, int width, int precision, int size)
+>>>>>>> 44a56f3faa9b33306d38ad35a7b89980e5ea2353
 {
 	UNUSED(types);
 	UNUSED(buffer);
@@ -109,7 +122,11 @@ int print_percent(va_list types, char buffer[]
  * Return: Number of chars printed
  */
 int print_int(va_list types, char buffer[],
+<<<<<<< HEAD
 		int flags, int width, int precision, int size)
+=======
+	int flags, int width, int precision, int size)
+>>>>>>> 44a56f3faa9b33306d38ad35a7b89980e5ea2353
 {
 	int i = BUFF_SIZE - 2;
 	int is_negative = 0;
@@ -153,7 +170,11 @@ int print_int(va_list types, char buffer[],
  * Return: Numbers of char printed.
  */
 int print_binary(va_list types, char buffer[],
+<<<<<<< HEAD
 		int flags, int width, int precision, int size)
+=======
+	int flags, int width, int precision, int size)
+>>>>>>> 44a56f3faa9b33306d38ad35a7b89980e5ea2353
 {
 	unsigned int n, m, i, sum;
 	unsigned int a[32];
@@ -177,11 +198,19 @@ int print_binary(va_list types, char buffer[],
 	{
 		sum += a[i];
 		if (sum || i == 31)
+<<<<<<< HEAD
 		{	
 		char z = '0' + a[i];
 
 		write(1, &z, 1);
 		count++;
+=======
+		{
+			char z = '0' + a[i];
+
+			write(1, &z, 1);
+			count++;
+>>>>>>> 44a56f3faa9b33306d38ad35a7b89980e5ea2353
 		}
 	}
 	return (count);
